@@ -1,8 +1,8 @@
-// Ler 9 números inteiros para preencher uma matriz D 3x3, ou seja, com 3 linhas e 3 colunas
+// 1) Ler 9 números inteiros para preencher uma matriz D 3x3, ou seja, com 3 linhas e 3 colunas
 // (considere que não serão informados valores duplicados). A seguir, ler um número inteiro X e escrever
 // uma mensagem indicando se o valor de X existe ou não na matriz D. */
 
-program exerc1matriz;
+program exerc1_matriz;
 uses crt;
 
 var d: array [1..3, 1..3] of integer;
@@ -42,7 +42,7 @@ begin
 end.
 
 
-//  Ler uma matriz SOMA 4x4, calcular e escrever as seguintes somas:
+// 2) Ler uma matriz SOMA 4x4, calcular e escrever as seguintes somas:
 //  a) da linha 3
 //  b) da coluna 2
 //  c) de todos os elementos da matriz 
@@ -99,7 +99,7 @@ begin
 end.
 
 
-//  Ler uma matriz G 3x3 e criar 2 vetores, SL e SC, de 3 elementos cada, contendo respectivamente as
+//  3) Ler uma matriz G 3x3 e criar 2 vetores, SL e SC, de 3 elementos cada, contendo respectivamente as
 // somas das linhas e das colunas de G. Escrever os vetores criados.
 
 program exerc3_matriz;
