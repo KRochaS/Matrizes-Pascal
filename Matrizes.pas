@@ -258,3 +258,59 @@ begin
 
      readln;
 end.
+
+// 6) Fazer um programa para ler ao final da manhã o fechamento do caixa de uma loja, ou seja, o seu
+// rendimento ao final da manhã. O mesmo deverá ser feito ao final da tarde. Este levantamento deve ser
+// feito todos os dias da semana (de segunda-feira a sexta-feira). Ao final da semana, após feitas todas as
+// leituras, descobrir e escrever o dia e o turno que teve maior rendimento. Obs.: Utilizar o conceito de
+// matriz para resolver este exercício.
+
+program exerc6_matriz;
+uses crt;
+
+var matriz: array [1..2, 1..5] of integer;
+var i,j,maior, posc: integer;
+var turno: string[5];
+
+begin
+     maior:=matriz[1,1];
+
+     writeln('Digite o rendimento semanal: ');
+     for i:=1 to 2 do
+         for j:=1 to 5 do
+             begin
+                  write('[',i,',',j,']');
+                  readln(matriz[i,j]);
+             end;
+         ;
+     ;
+     for i:=1 to 2 do
+         for j:=1 to 5 do
+             if matriz[i,j] > maior then
+                begin
+                    maior:=matriz[i,j];
+                    posc:=j;
+                end;
+             ;
+         ;
+     ;
+
+     for i:=1 to 2 do
+         for j:=1 to 5 do
+             if i=1 then
+                turno:='manha'
+             else
+                 turno:='tarde'
+             ;
+         ;
+     ;
+
+    writeln('O dia da semana com Maior rendimento: ',posc);
+    writeln('O rendimento foi de: ', maior);
+    writeln('Turno: ',turno);
+
+
+readln;
+
+
+end.
