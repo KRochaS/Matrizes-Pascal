@@ -143,13 +143,13 @@ begin
 
 end.
 
-// 3) Ler duas matrizes, A 4x6 e B 4x6, e criar:
+// 4) Ler duas matrizes, A 4x6 e B 4x6, e criar:
 // a) uma matriz S que seja a soma de A e B (A+B)
 // b) uma matriz D que seja a diferença de A e B (A-B)
 // Escrever as matrizes S e D. 
 
 
-program exerc3_matriz;
+program exerc4_matriz;
 uses crt;
 
 var  a,b,s,d: array [1..4, 1..6] of integer;
@@ -211,6 +211,49 @@ begin
                   write(d[i,j], ' ');
               ;
          end;
+     ;
+
+     readln;
+end.
+
+
+ // 5) Ler uma matriz 4x4 de números inteiros, multiplicar os elementos da diagonal principal por um
+ //    número inteiro também lido e escrever a matriz resultante. 
+ 
+ program exerc5_matriz;
+uses crt;
+
+var m: array [1..4, 1..4] of integer;
+var i, j, n: integer;
+
+begin
+
+     writeln('Digite os valores da Matriz: ');
+     for i:=1 to 4 do
+         for j:=1 to 4 do
+                  begin
+                       write('[',i,',',j,']: ');
+                       readln(m[i,j]);
+                   end;
+         ;
+     ;
+
+     writeln('Informe um numero para multiplicar a diagonal: ');
+     readln(n);
+
+     for i:=1 to 4 do
+         m[i,i]:=m[i,i]*n;
+     ;
+
+     writeln('Matriz resultante: ');
+     for i:=1 to 4 do
+         begin
+              writeln;
+              for j:=1 to 4 do
+                  write(m[i,j], ' ');
+               ;
+         end;
+
      ;
 
      readln;
