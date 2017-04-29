@@ -142,3 +142,76 @@ begin
     readln;
 
 end.
+
+// 3) Ler duas matrizes, A 4x6 e B 4x6, e criar:
+// a) uma matriz S que seja a soma de A e B (A+B)
+// b) uma matriz D que seja a diferença de A e B (A-B)
+// Escrever as matrizes S e D. 
+
+
+program exerc3_matriz;
+uses crt;
+
+var  a,b,s,d: array [1..4, 1..6] of integer;
+var i,j:integer;
+
+begin
+
+     writeln('Digite os numeros para adicionar a Matriz A: ');
+     for i:=1 to 4 do
+         for j:=1 to 6 do
+             begin
+                  write('[',i,',',j,']: ');
+                  readln(a[i,j]);
+              end;
+         ;
+      ;
+
+      writeln('Digite os numeros para adicionar a Matriz B: ');
+      for i:=1 to 4 do
+          for j:=1 to 6 do
+              begin
+                   write('[',i,',',j,']: ');
+                   readln(b[i,j]);
+               end;
+
+           ;
+      ;
+
+      for i:=1 to 4 do
+          for j:=1 to 6 do
+              s[i,j]:=a[i,j]+b[i,j];
+          ;
+      ;
+
+      for i:=1 to 4 do
+          for j:=1 to 6 do
+              d[i,j]:=a[i,j]-b[i,j];
+          ;
+     ;
+
+     writeln('Matriz S (A+B): ');
+     for i:=1  to 4 do
+         begin
+              writeln;
+              for j:=1 to 6 do
+                  write(s[i,j], ' ');
+              ;
+          end;
+     ;
+
+     writeln;
+     writeln;
+
+     writeln('Matriz D (A-B): ');
+     for i:=1 to 4 do
+         begin
+              writeln;
+              for j:=1 to 6 do
+                  write(d[i,j], ' ');
+              ;
+         end;
+     ;
+
+     readln;
+end.
