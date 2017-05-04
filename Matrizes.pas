@@ -420,3 +420,66 @@ begin
        ;
   readln;
 end.
+
+// 9) Desenvolva um programa que leia uma matriz 2x2, calcule e mostre a matriz resultante a qual deve ser a
+// matriz digitada multiplicada pelo maior elemento da matriz original.
+
+program exerc9;
+uses crt;
+
+var matrizoriginal, matrizresultante: array [1..2 , 1..2] of integer;
+var i, j, maior: integer;
+
+begin
+     maior:=matrizoriginal[1,1];
+
+     writeln('Digite os elementos da Matriz Original: ');
+     for i:=1 to 2 do
+         for j:=1 to 2 do
+             begin
+                  write('[',i,',',j,']: ');
+                  readln(matrizoriginal[i,j]);
+             end;
+          ;
+     ;
+
+     for i:=1 to 2 do
+         for j:=1 to 2 do
+             if matrizoriginal[i,j] > maior then
+                maior:=matrizoriginal[i,j];
+             ;
+         ;
+     ;
+
+     for i:=1 to 2 do
+         for j:=1 to 2 do
+             matrizresultante[i,j]:=matrizoriginal[i,j]*maior;
+         ;
+     ;
+
+     writeln('Matriz Original: ');
+     for i:=1 to 2 do
+         begin
+              writeln;
+              for j:=1 to 2 do
+                  write(matrizoriginal[i,j],' ');
+              ;
+         end;
+     ;
+
+     writeln;
+     writeln;
+
+     writeln('Matriz multiplicada pelo maior elemento que eh: ', maior);
+     for i:=1 to 2 do
+         begin
+              writeln;
+              for j:=1 to 2 do
+                  write(matrizresultante[i,j],' ');
+              ;
+          end;
+     ;
+
+
+     readln;
+end.
