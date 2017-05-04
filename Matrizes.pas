@@ -314,3 +314,37 @@ readln;
 
 
 end.
+
+// 7) Escreva um programa em Pascal que, dada uma matriz 3x3, armazena em cada posição da matriz, a
+// soma dos valores da linha e coluna que definem a posição. Por exemplo, na posição [1][2] você deverá
+// armazenar o valor 1+2 = 3 e assim por diante. Imprima a matriz na tela.
+
+program exerc7;
+uses crt;
+
+var matriz: array [1..3 , 1..3] of integer;
+var i,j: integer;
+
+
+begin
+     for i:=1 to 3 do
+         for j:=1 to 3 do
+             matriz[i,j]:=i+j;
+         ;
+     ;
+
+     writeln('Matriz na tela: ');
+     for i:=1 to 3 do
+         begin
+              writeln;
+              for j:=1 to 3 do
+                  write(matriz[i,j],' ');
+              ;
+         end;
+      ;
+
+     readln;
+
+end.
+
+
