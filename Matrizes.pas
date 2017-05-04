@@ -347,4 +347,76 @@ begin
 
 end.
 
+// 8) Escreva um programa em PASCAL que leia 2 matrizes A e B e calcule a matriz C que será o resultado
+// da multiplicação de A por B (A, B e C têm dimensão 2x2). Mostre as 3 matrizes ao final da execução.
+// Lembre-se que multiplicação de matrizes segue uma regra específica.
 
+program exerc8;
+uses crt;
+
+var A,B,C: array [1..2, 1..2] of integer;
+var i, j: integer;
+
+begin
+     writeln('Digite os valores da Matriz A: ');
+     for i:=1 to 2 do
+         for j:=1 to 2 do
+             begin
+                 write('[',i,',',j,']: ');
+                  readln(A[i,j]);
+             end;
+         ;
+     ;
+
+     writeln('Digite os valores da Matriz B: ');
+     for i:=1 to 2 do
+         for j:=1 to 2 do
+             begin
+                  write('[',i,',',j,']: ');
+                  readln(B[i,j]);
+             end;
+         ;
+     ;
+
+
+     for i:=1 to 2 do
+         for j:=1 to 2 do
+             C[i,j]:=(A[i,1]*B[1,j] + A[i,2]*B[2,j]);
+          ;
+      ;
+
+      writeln;
+      writeln('Matriz A: ');
+      for i:=1 to 2 do
+          begin
+               writeln;
+               for j:=1 to 2 do
+                   write(A[i,j],' ');
+               ;
+           end;
+       ;
+
+       writeln;
+       writeln;
+       writeln('Matriz B: ');
+      for i:=1 to 2 do
+          begin
+               writeln;
+               for j:=1 to 2 do
+                   write(B[i,j],' ');
+               ;
+           end;
+       ;
+      writeln;
+      writeln;
+      writeln('Matriz C resultante: ');
+      for i:=1 to 2 do
+          begin
+               writeln;
+               for j:=1 to 2 do
+                   write(C[i,j],' ');
+               ;
+           end;
+       ;
+  readln;
+end.
