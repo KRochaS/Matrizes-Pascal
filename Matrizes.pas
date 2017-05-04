@@ -483,3 +483,60 @@ begin
 
      readln;
 end.
+
+// 10) Implemente um programa em Pascal que leia uma matriz 10x20 com números inteiros e some cada uma
+// das linhas, armazenando o resultado das somas em um vetor. A seguir, multiplique cada elemento da
+// matriz pela soma da linha correspondente e mostre a matriz resultante.
+
+program exerc10;
+uses crt;
+
+var matriz, matrizresult: array [1..10 , 1..20] of integer;
+var vtsoma: array [1..10] of integer;
+var i, j, a: integer;
+
+begin
+
+     writeln('Digite os valores da Matriz: ');
+     for i:=1 to 10 do
+         for j:=1 to 20 do
+             begin
+                  write('[',i,',',j,']: ');
+                  readln(matriz[i,j]);
+             end;
+         ;
+     ;
+
+     for i:=1 to 10 do
+         for j:=1 to 20 do
+              vtsoma[i]:=vtsoma[i]+matriz[i,j];
+         ;
+     ;
+
+     for i:=1 to 10 do
+         for j:=1 to 20 do
+                matrizresult[i,j]:=matriz[i,j]*vtsoma[i];
+         ;
+     ;
+
+     writeln('A soma das linhas eh: ');
+     for a:=1 to 3 do
+         writeln(vtsoma[a]);
+     ;
+
+
+
+     writeln('A matriz resultante eh: ');
+     for i:=1 to 3 do
+         begin
+              writeln;
+              for j:=1 to 4 do
+                   write(matrizresult[i,j],' ');
+              ;
+         end;
+
+     ;
+
+     readln;
+
+end.
