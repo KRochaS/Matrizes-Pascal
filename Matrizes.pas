@@ -265,7 +265,7 @@ end.
 // leituras, descobrir e escrever o dia e o turno que teve maior rendimento. Obs.: Utilizar o conceito de
 // matriz para resolver este exercício.
 
-program exerc6_matriz;
+program exerc6;
 uses crt;
 
 var matriz: array [1..2, 1..5] of integer;
