@@ -2,7 +2,7 @@
 // (considere que não serão informados valores duplicados). A seguir, ler um número inteiro X e escrever
 // uma mensagem indicando se o valor de X existe ou não na matriz D. */
 
-program exerc1_matriz;
+program exerc1;
 uses crt;
 
 var d: array [1..3, 1..3] of integer;
@@ -48,7 +48,7 @@ end.
 //  c) de todos os elementos da matriz 
 
 
-program exerc2_matriz;
+program exerc2;
 uses crt;
 
 var soma: array [1..4, 1..4] of integer;
@@ -102,7 +102,7 @@ end.
 //  3) Ler uma matriz G 3x3 e criar 2 vetores, SL e SC, de 3 elementos cada, contendo respectivamente as
 // somas das linhas e das colunas de G. Escrever os vetores criados.
 
-program exerc3_matriz;
+program exerc3;
 uses crt;
 
 var g: array [1..3, 1..3] of integer;
