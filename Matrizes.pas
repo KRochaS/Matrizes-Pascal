@@ -540,3 +540,44 @@ begin
      readln;
 
 end.
+
+// 11) Implemente um programa que leia uma matriz 8x8 com números inteiros e mostre uma mensagem
+// informando se a matriz é simétrica. Uma matriz simétrica possui A[i,j] = A[j,i].
+
+program exerc11;
+uses crt;
+
+var matriz: array [1..8 , 1..8] of integer;
+var i, j: integer;
+var simetrica: String[5];
+
+
+begin
+     writeln('Digite os numeros da Matriz: ');
+     for i:=1 to 8 do
+         for j:=1 to 8 do
+             begin
+                  write('[',i,',',j,']: ');
+                  readln(matriz[i,j]);
+             end;
+         ;
+      ;
+
+      for i:=1 to 8 do
+          for j:=1 to 8 do
+                   if matriz[i,j]=matriz[j,i] then
+                      simetrica:='true';
+                    ;
+           ;
+       ;
+
+       if simetrica = 'true' then
+           writeln('A matriz eh simetrica.')
+       else
+           writeln('A matriz nao eh simetrica.')
+       ;
+
+
+     readln;
+
+end.
